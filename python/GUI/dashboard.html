@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Robot GUI</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="titolo">RobotArm</div>
+        <form>
+            <div class="griglia">
+                <div id="base" class="motoreContainer">
+
+                    <label>Base</label>
+
+                    <div class="inputContainer">
+                        <svg class="arco" width="200" height="200" viewBox="0 0 100 100">
+
+                            <defs>
+                                <linearGradient id="arcoGradiente" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#00FF00" />
+                                    <stop offset="50%" stop-color="#FFFF00" />
+                                    <stop offset="100%" stop-color="#FF0000" />
+                                </linearGradient>
+                            </defs>
+
+
+                            <!-- Cerchio di sfondo opzionale -->
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#eee" stroke-width="11" 
+                                stroke-linecap="round" 
+                                stroke-dasharray="141.37 282.7" 
+                                transform="rotate(-180 50 50)" />
+                            
+                            <!-- Arco dinamico (90 gradi di ampiezza su una circonferenza di ~282.7) -->
+                            <circle id="baseArco" cx="50" cy="50" r="45" fill="none" stroke-width="10"
+                                    stroke-dasharray="70.685 282.7"
+                                    stroke-linecap="round"
+                                    stroke="url(#arcoGradiente)" 
+                                    transform="rotate(-180 50 50)" />
+                        </svg>
+                        <input class="arcoInput" id="baseInput"  type="number" id="arc-input" min="0" max="180" value="90">
+                    </div>
+                </div>
+
+                <div id="spalla" class="motoreContainer">
+
+                    <label>Spalla</label>
+
+                    <div class="inputContainer">
+                        <svg class="arco" width="200" height="200" viewBox="0 0 100 100">
+
+                            <defs>
+                                <linearGradient id="arcoGradiente" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#00FF00" />
+                                    <stop offset="50%" stop-color="#FFFF00" />
+                                    <stop offset="100%" stop-color="#FF0000" />
+                                </linearGradient>
+                            </defs>
+
+
+                            <!-- Cerchio di sfondo opzionale -->
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#eee" stroke-width="11" 
+                                stroke-linecap="round" 
+                                stroke-dasharray="141.37 282.7" 
+                                transform="rotate(-180 50 50)" />
+                            
+                            <!-- Arco dinamico (90 gradi di ampiezza su una circonferenza di ~282.7) -->
+                            <circle id="spallaArco" cx="50" cy="50" r="45" fill="none" stroke-width="10"
+                                    stroke-dasharray="70.685 282.7"
+                                    stroke-linecap="round"
+                                    stroke="url(#arcoGradiente)" 
+                                    transform="rotate(-180 50 50)" />
+                        </svg>
+                        <input class="arcoInput" id="spallaInput"  type="number" id="arc-input" min="0" max="180" value="90">
+                    </div>
+                </div>
+
+                <div id="gomito" class="motoreContainer">
+
+                    <label>Gomito</label>
+
+                    <div class="inputContainer">
+                        <svg class="arco" width="200" height="200" viewBox="0 0 100 100">
+
+                            <defs>
+                                <linearGradient id="arcoGradiente" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#00FF00" />
+                                    <stop offset="50%" stop-color="#FFFF00" />
+                                    <stop offset="100%" stop-color="#FF0000" />
+                                </linearGradient>
+                            </defs>
+
+
+                            <!-- Cerchio di sfondo opzionale -->
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#eee" stroke-width="11" 
+                                stroke-linecap="round" 
+                                stroke-dasharray="141.37 282.7" 
+                                transform="rotate(-180 50 50)" />
+                            
+                            <!-- Arco dinamico (90 gradi di ampiezza su una circonferenza di ~282.7) -->
+                            <circle id="gomitoArco" cx="50" cy="50" r="45" fill="none" stroke-width="10"
+                                    stroke-dasharray="70.685 282.7"
+                                    stroke-linecap="round"
+                                    stroke="url(#arcoGradiente)" 
+                                    transform="rotate(-180 50 50)" />
+                        </svg>
+                        <input class="arcoInput" id="gomitoInput"  type="number" id="arc-input" min="0" max="180" value="90">
+                    </div>
+                </div>
+
+                <div id="polso" class="motoreContainer">
+
+                    <label>Polso</label>
+
+                    <div class="inputContainer">
+                        <svg class="arco" width="200" height="200" viewBox="0 0 100 100">
+
+                            <defs>
+                                <linearGradient id="arcoGradiente" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#00FF00" />
+                                    <stop offset="50%" stop-color="#FFFF00" />
+                                    <stop offset="100%" stop-color="#FF0000" />
+                                </linearGradient>
+                            </defs>
+
+
+                            <!-- Cerchio di sfondo opzionale -->
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#eee" stroke-width="11" 
+                                stroke-linecap="round" 
+                                stroke-dasharray="141.37 282.7" 
+                                transform="rotate(-180 50 50)" />
+                            
+                            <!-- Arco dinamico (90 gradi di ampiezza su una circonferenza di ~282.7) -->
+                            <circle id="polsoArco" cx="50" cy="50" r="45" fill="none" stroke-width="10"
+                                    stroke-dasharray="70.685 282.7"
+                                    stroke-linecap="round"
+                                    stroke="url(#arcoGradiente)" 
+                                    transform="rotate(-180 50 50)" />
+                        </svg>
+                        <input class="arcoInput" id="polsoInput"  type="number" id="arc-input" min="0" max="180" value="90">
+                    </div>
+                </div>
+
+                <div id="mano" class="motoreContainer">
+
+                    <label>Mano</label>
+
+                    <div class="inputContainer">
+                        <svg class="arco" width="200" height="200" viewBox="0 0 100 100">
+
+                            <defs>
+                                <linearGradient id="arcoGradiente" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#00FF00" />
+                                    <stop offset="50%" stop-color="#FFFF00" />
+                                    <stop offset="100%" stop-color="#FF0000" />
+                                </linearGradient>
+                            </defs>
+
+
+                            <!-- Cerchio di sfondo opzionale -->
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#eee" stroke-width="11" 
+                                stroke-linecap="round" 
+                                stroke-dasharray="141.37 282.7" 
+                                transform="rotate(-180 50 50)" />
+                            
+                            <!-- Arco dinamico (90 gradi di ampiezza su una circonferenza di ~282.7) -->
+                            <circle id="manoArco" cx="50" cy="50" r="45" fill="none" stroke-width="10"
+                                    stroke-dasharray="70.685 282.7"
+                                    stroke-linecap="round"
+                                    stroke="url(#arcoGradiente)" 
+                                    transform="rotate(-180 50 50)" />
+                        </svg>
+                        <input class="arcoInput" id="manoInput"  type="number" id="arc-input" min="0" max="180" value="90">
+                    </div>
+                </div>
+
+                <div id="pinza" class="motoreContainer">
+
+                    <label>Pinza</label>
+
+                    <div class="inputContainer">
+                        <svg class="arco" width="200" height="200" viewBox="0 0 100 100">
+
+                            <defs>
+                                <linearGradient id="arcoGradiente" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#00FF00" />
+                                    <stop offset="50%" stop-color="#FFFF00" />
+                                    <stop offset="100%" stop-color="#FF0000" />
+                                </linearGradient>
+                            </defs>
+
+
+                            <!-- Cerchio di sfondo opzionale -->
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#eee" stroke-width="11" 
+                                stroke-linecap="round" 
+                                stroke-dasharray="141.37 282.7" 
+                                transform="rotate(-180 50 50)" />
+                            
+                            <!-- Arco dinamico (90 gradi di ampiezza su una circonferenza di ~282.7) -->
+                            <circle id="pinzaArco" cx="50" cy="50" r="45" fill="none" stroke-width="10"
+                                    stroke-dasharray="70.685 282.7"
+                                    stroke-linecap="round"
+                                    stroke="url(#arcoGradiente)" 
+                                    transform="rotate(-180 50 50)" />
+                        </svg>
+                        <input class="arcoInput" id="pinzaInput"  type="number" id="arc-input" min="0" max="100" value="50">
+                    </div>
+                </div>
+            </div>
+
+            <button id="invia" type="button">Invia</button>
+        </form>    
+        <script src="sliderController.js"></script>
+    </body>
+</html>
